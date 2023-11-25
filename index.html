@@ -50,7 +50,7 @@
   </nav>
   <section>
     <h2>欢迎访问资源分享网站</h2>
-    <p>这是一个资源分享网站的首页</p>
+    <p>这是一个资源分享网站的首页，目前暂无实装内容尽情期待</p>
   </section>
   <script>
     // 检查本地存储中是否有密码和时间记录
@@ -63,7 +63,7 @@
       // 无需输入密码
     } else {
       // 需要输入密码
-      const inputPassword = prompt('请输入密码：');
+      const inputPassword = prompt('请输入内测密码：');
       if (inputPassword === '687963') {
         // 记录密码和当前时间到本地存储
         localStorage.setItem('password', inputPassword);
@@ -74,5 +74,95 @@
       }
     }
   </script>
+  
 </body>
+<!-- 更新日志弹窗 -->
+<div id="update-log-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <div class="laod">
+    <h2>更新日志</h2>
+    <p>版本 1.0.1 - 修复了一些小问题。</p>
+    <p>版本 1.0.0 - 网站上线。</p>
+    </div>
+  </div>
+</div>
+<style>
+      @font-face {
+            font-family: aproud;
+            src: url("font/SF-Pro-Rounded-Medium.otf");
+        }
+        .laod {
+          font-family: aproud, sans-serif;
+        }
+        
+  /* 弹窗基本样式 */
+.modal {
+  display: none; /* 默认隐藏弹窗 */
+  position: fixed;
+  z-index: 1; /* 位于页面内容之上 */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* 启用滚动 */
+  background-color: rgba(0, 0, 0, 0.4); /* 半透明背景 */
+}
+
+/* 弹窗内容区域 */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 居中显示 */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* 宽度 */
+}
+
+/* 关闭按钮样式 */
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+<script>
+  // 获取弹窗和关闭按钮的元素
+var modal = document.getElementById("update-log-modal");
+var closeButton = document.getElementsByClassName("close-button")[0];
+
+// 显示弹窗函数
+function showModal() {
+  modal.style.display = "block";
+}
+
+// 关闭弹窗函数
+function closeModal() {
+  modal.style.display = "none";
+}
+
+// 点击关闭按钮时关闭弹窗
+closeButton.onclick = function() {
+  closeModal();
+}
+
+// 页面加载完成后自动显示弹窗
+window.onload = function() {
+  showModal();
+}
+
+// 点击弹窗外部区域也可关闭弹窗
+window.onclick = function(event) {
+  if (event.target == modal) {
+    closeModal();
+  }
+}
+</script>
 </html>
