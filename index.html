@@ -41,6 +41,7 @@
   <header>
     <h2>资源分享网站</h2>
   </header>
+  <div class="link">
   <nav>
     <a href="index2\pc-software.html">PC软件</a>
     <a href="index2\mobile-software.html">手机软件</a>
@@ -49,6 +50,7 @@
     <a href="https://github.com">GitHub</a>
     <a href="indexcopy.html">若加载时间过长点此进入无字体版</a>
   </nav>
+  </div>
   <section>
     <h2>欢迎访问资源分享网站</h2>
     <p>这是一个资源分享网站的首页，目前暂无实装内容尽情期待</p>
@@ -78,6 +80,13 @@
 <head>
   <title>团队介绍</title>
   <style>
+    @font-face {
+            font-family: aproud;
+            src: url("font/SF-Pro-Rounded-Medium.otf");
+        }
+    .link{
+      font-family: aproud;
+    }
       body {
           font-family: Arial, sans-serif;
           background-color: #f2f2f2;
@@ -138,58 +147,37 @@
       <p>简介团队成员3的个人描述和职责。</p>
   </div>
 </body>
+
 <footer>
-  <div>
-      <a href="#">关注我们</a>
-      <a href="#">关于</a>
-      <a href="#">支持</a>
-      <a href="#">自定义项1</a>
-      <a href="#">自定义项2</a>
-      <a href="#">自定义项3</a>
+<div class="com-md-12"  style= padding-top:40px;>
+  <div class="com-md-3"></div>
+  <div class="com-md-6">
+    <div class="row" >
+      <div class="col-md-12" style="padding-left: 635px;">
+        <a href=""><span><font size="2" color="">&nbsp;关于我们&nbsp;</font></span></a><span><font size="1" color=""> | </font></span>
+        <a href=""><span><font size="2" color="">&nbsp;加入我们&nbsp;</font></span></a><span><font size="1" color=""> | </font></span>
+        <a href=""><span><font size="2" color="">&nbsp;联系我们&nbsp;</font></span></a>
+      </div>
+      <div class="col-md-12" style="padding: auto;">
+        <font size="2" color="0">
+          <center>
+        
+            <p>Copyright© 2020 All Rights Reserved. </p>
+            <p>如有任何建议或意见或其他资源欢迎反馈与投稿</p>
+            邮箱：2405503541@qq.com或gytfu39@outlook.com(这个不常看)&nbsp;&nbsp;&nbsp;&nbsp;另一位的邮箱：暂无         
+          </center>
+        </font>
+      </div>
+    </div>
   </div>
-  <div>
-      <a href="#">自定义项1链接1</a>
-      <a href="#">自定义项1链接2</a>
-      <a href="#">自定义项1链接3</a>
-  </div>
-  <div>
-      <a href="#">自定义项2链接1</a>
-      <a href="#">自定义项2链接2</a>
-      <a href="#">自定义项2链接3</a>
-  </div>
-  <div>
-      <a href="#">自定义项3链接1</a>
-      <a href="#">自定义项3链接2</a>
-      <a href="#">自定义项3链接3</a>
-  </div>
+  <div class="com-md-3"></div>
+</div>
 </footer>
-
 <style>
-footer {
-    background-color: #333;
-    padding: 20px;
-}
-
-footer div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-bottom: 20px;
-}
-
-footer a {
-    text-decoration: none;
-    color: #fff;
-    margin-right: 20px;
-    margin-bottom: 5px;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
- </style>
+ .com-md-12{
+  background-color: #d7d5d5;
+ }
+</style>
 </body>
 <!-- 更新日志弹窗 -->
 <div id="update-log-modal" class="modal">
@@ -203,10 +191,7 @@ footer a:hover {
   </div>
 </div>
 <style>
-      @font-face {
-            font-family: aproud;
-            src: url("font/SF-Pro-Rounded-Medium.otf");
-        }
+      
         .laod {
           font-family: aproud, sans-serif;
         }
