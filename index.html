@@ -64,22 +64,6 @@
     <script>
 
 
-  // 在LocalStorage中查找登录时间
-  let loginTime = localStorage.getItem('loginTime');
-
-// 如果存在登录时间，则检查是否超过30分钟
-if (loginTime) {
-  const currentTime = new Date();
-  const loginTimeObj = new Date(loginTime);
-  const timeDiff = Math.abs(currentTime.getTime() - loginTimeObj.getTime());
-  const overThirtyMinutes = timeDiff > (30 * 60 * 1000);
-
-  // 如果未超过30分钟，则跳转到index.html
-  if (!overThirtyMinutes) {
-    window.location.href = "userpage.html";
-  }
-}
-
 // 登录验证
 const form = document.getElementById("loginForm");
 const usernameInput = document.getElementById("username");
@@ -90,10 +74,6 @@ form.addEventListener("submit", function(event) {
 
   // 验证用户名和密码
   if (usernameInput.value === "admin" && passwordInput.value === "687963") {
-    // 更新登录时间
-    localStorage.setItem('loginTime', new Date().getTime());
-
-    // 跳转到index.html
     window.location.href = "index.html";
   } else {
     alert("Invalid username or password!");
