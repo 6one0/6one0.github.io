@@ -1,18 +1,33 @@
-<!--页面加载start-->
-<link rel="stylesheet" type="text/css" href="css\loader.css">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minecraft 使用指南</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        #content {
+            margin: 0 auto;
+            width: 60%;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>Minecraft 使用指南</h1>
+        <h2>服务器设置</h2>
+        <p>在这里，我们将介绍如何设置Minecraft服务器。</p>
+        <h2>Java版使用</h2>
+        <p>在这里，我们将介绍如何使用Minecraft的Java版。</p>
+    </div>
 
-<script type="text/javascript">         
-    // 等待所有加载
-    $(window).load(function(){
-        $('body').addClass('loaded');
-        $('#loader-wrapper .load_title').remove();
-    }); 
-</script>    
-
-<div id="loader-wrapper">
-    <div id="loader"></div>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
-    <div class="load_title">正在加载LoveFeel站点<br><span>V1.0</span></div>
-</div>
-<!--页面加载end-->
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            console.log('页面已加载，可以开始你的JavaScript代码');
+        });
+    </script>
+</body>
+</html>
