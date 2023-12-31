@@ -43,80 +43,42 @@
 
   <div class="link">
   <nav>
+<head>
     <style>
-      .dropbtn {
-        background-color: #3a3737;
-        color: white;
-        padding: 16px;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-      }
-      
-      .dropbtn:hover, .dropbtn:focus {
-        background-color: #3a3737;
-      }
-      
-      .dropdown {
-        position: relative;
-        display: inline-block;
-      }
-      
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f1f1f1;
-        min-width: 160px;
-        overflow: auto;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-      }
-      
-      .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-      }
-      
-      .dropdown a:hover {background-color: #ddd;}
-      
-      .show {display: block;}
-      </style>
-      </head>
-      <body>
-      
-      <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">主要内容</button>
-        <div id="myDropdown" class="dropdown-content">
-          <a href="index2\pc-software.html">pc软件</a>
-          <a href="index2\mobile-software.html">手机软件</a>
-          <a href="index2/recommended.html">常驻推荐</a>
-          <a href="https://github.com">GitHub</a>
-        </div>
-      </div>
-      
-      <script>
-      /* 当用户点击按钮时，
-      在隐藏和显示下拉内容之间切换 */
-      function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-      }
-      
-      // 如果用户在下拉框外单击，则关闭下拉框
-      window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
-          var dropdowns = document.getElementsByClassName("dropdown-content");
-          var i;
-          for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-              openDropdown.classList.remove('show');
-            }
-          }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            background-color: #3a3737;
         }
-      }
-      </script>
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 160px;
+            z-index: 1;
+            background-color: #3a3737;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown a{
+            background-color: #3a3737;
+        }
+        .drlink{
+          margin: 10px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <a href="#">下拉菜单</a>
+        <div class="dropdown-content">
+            <div class="drlink"><a href="#">链接 1</a></div>
+            <div class="drlink"><a href="#">链接 2</a></div>
+            <div class="drlink"><a href="#">链接 3</a></div>
+        </div>
+    </div>
+</body>
     <a href="index2\about.html">关于</a>
     <a href="index2\contact.html">联系我们</a>
     <a href="example.html">优秀html案例</a>
@@ -132,11 +94,6 @@
 
 <head>
   <style>
-
-    .link{
-      font-family: aproud;
-    }
-
       .team {
           font-family: Arial, sans-serif;
           background-color: #f2f2f2;
@@ -188,7 +145,7 @@
   <div class="team-member">
       <img src="src\teammeberimg\145128522.png" alt="团队成员2">
       <h2>ELEVEN2022</h2>
-      <p>是这个项目的次要维护者，负责网站的资源搜集和为本站提供技术支持(屁事不做)</p>
+      <p>是这个项目的次要维护者，负责网站的资源搜集和为本站提供技术支持</p>
   </div>
 
   <div class="team-member">
@@ -199,7 +156,7 @@
 
   <div class="team-member">
       <img src="src/teammeberimg/logo.png"  alt="团队成员4">
-      <h2>这是我们的团队6one0（DMZ工作室）</h2>
+      <h2>这是我们的团队6one0（DMZstudio）</h2>
       <p>这是我们在github上的组织，目前只有我们三个人,555</p>
   </div>
   <div class="team-member">
@@ -257,79 +214,78 @@
   </div>
 </div>
 <style>
-      
         .laod {
           font-family: Arial, Helvetica, sans-serif, sans-serif;
         }
         
-  /* 弹窗基本样式 */
-.modal {
-  display: none; /* 默认隐藏弹窗 */
-  position: fixed;
-  z-index: 1; /* 位于页面内容之上 */
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto; /* 启用滚动 */
-  background-color: rgba(0, 0, 0, 0.4); /* 半透明背景 */
-}
+          /* 弹窗基本样式 */
+        .modal {
+          display: none; /* 默认隐藏弹窗 */
+          position: fixed;
+          z-index: 1; /* 位于页面内容之上 */
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto; /* 启用滚动 */
+          background-color: rgba(0, 0, 0, 0.4); /* 半透明背景 */
+        }
 
-/* 弹窗内容区域 */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 居中显示 */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* 宽度 */
-}
+        /* 弹窗内容区域 */
+        .modal-content {
+          background-color: #fefefe;
+          margin: 15% auto; /* 居中显示 */
+          padding: 20px;
+          border: 1px solid #888;
+          width: 80%; /* 宽度 */
+        }
 
-/* 关闭按钮样式 */
-.close-button {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
+        /* 关闭按钮样式 */
+        .close-button {
+          color: #aaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
 
-.close-button:hover,
-.close-button:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-</style>
-<script>
-  // 获取弹窗和关闭按钮的元素
-var modal = document.getElementById("update-log-modal");
-var closeButton = document.getElementsByClassName("close-button")[0];
+        .close-button:hover,
+        .close-button:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        </style>
+        <script>
+          // 获取弹窗和关闭按钮的元素
+        var modal = document.getElementById("update-log-modal");
+        var closeButton = document.getElementsByClassName("close-button")[0];
 
-// 显示弹窗函数
-function showModal() {
-  modal.style.display = "block";
-}
+        // 显示弹窗函数
+        function showModal() {
+          modal.style.display = "block";
+        }
 
-// 关闭弹窗函数
-function closeModal() {
-  modal.style.display = "none";
-}
+        // 关闭弹窗函数
+        function closeModal() {
+          modal.style.display = "none";
+        }
 
-// 点击关闭按钮时关闭弹窗
-closeButton.onclick = function() {
-  closeModal();
-}
+        // 点击关闭按钮时关闭弹窗
+        closeButton.onclick = function() {
+          closeModal();
+        }
 
-// 页面加载完成后自动显示弹窗
-window.onload = function() {
-  showModal();
-}
+        // 页面加载完成后自动显示弹窗
+        window.onload = function() {
+          showModal();
+        }
 
-// 点击弹窗外部区域也可关闭弹窗
-window.onclick = function(event) {
-  if (event.target == modal) {
-    closeModal();
-  }
-}
+        // 点击弹窗外部区域也可关闭弹窗
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            closeModal();
+          }
+        }
 </script>
 </body>
 
